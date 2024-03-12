@@ -1,0 +1,590 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Titillium Web', sans-serif;
+    
+}
+
+/*kutu genişlikleri*/
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10{width: 83.33%;}
+.col-11{width: 91.66%;}
+.col-12{width: 100%;}
+
+/*col- ile başlayan tüm sınıflara uygulansın*/
+[class*="col-"]{
+    float: left;
+    padding: 15px;
+    
+}
+
+/*satırların yan yana gelmesi için*/
+.row::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/*küçük ekranlara uyması için*/
+@media only screen and (max-width:500px) {
+    [class*="col-"]{width: 100%;}
+    #anamenu ul li{
+        border: 2px solid black;
+        border-radius: 15px;
+        padding: 7px;
+        background-color: white;
+        margin: 5px;
+    }
+    #anamenu ul li a{
+        text-decoration: none;
+        transition: ease 0.5s;
+        color: red;
+    }
+    #wall2 #anamenu ul li a{
+        text-decoration: none;
+        transition: ease 0.5s;
+        color: white;
+    }
+    #anamenu ul li a:hover{
+        color: black;
+    }    
+    #anamenu ul li:hover{
+        background-color: darkred;
+    }
+    #wall1 #anamenu ul li{
+        background-color: rgb(74, 146, 206);
+    }
+    #wall1 #anamenu ul li:hover{
+        background-color: darkcyan;
+    }
+    
+    #wall2 #anamenu ul li{
+        background-color: darkred;
+    }
+    #wall2 #anamenu ul li:hover{
+        background-color: rgb(97, 18, 18);
+    }
+    #wall3 #anamenu ul li{
+        background-color: darkcyan;
+    }
+    #wall3 #anamenu ul li:hover{
+        background-color: darkgray;
+    }
+    #wall4 #anamenu ul li{
+        background-color: rgb(28, 97, 76);
+    }
+    #wall4 #anamenu ul li:hover{
+        background-color: darkgreen;
+    }
+
+    #row2 #icerik {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding: 25px;
+        margin-top: 55px;
+    }
+    #wall #row1 #anamenu ul li a,#wall1 #row1 #anamenu ul li a,#wall2 #row1 #anamenu ul li a,
+    #wall3 #row1 #anamenu ul li a,#wall4 #row1 #anamenu ul li a{
+        color: black;
+    }
+   
+    #icerik h1{
+        text-align: center;
+    }
+    #icerik{
+        padding: 25px ;
+    }
+    #l1{
+        margin-left: 100pzx;
+    }   
+    #l2{
+        margin-left: 100zpx;
+    }   
+    #l3{
+        margin-left: 100pzx;
+    }   
+    #l4{
+        margin-left: 100pxx;
+    }   
+    
+
+}
+@media screen and (max-width:900px){
+    .cards{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:500px){
+    #row1 #anamenu ul{
+        width: 100%;
+        display: block;
+        }
+    #row1 #anamenu ul li{
+        text-align: center;
+    }    
+}
+
+/* resimlerin düzgün görünmesi için */
+img{
+    width: 100%;
+    height: auto;
+}
+
+/* sayfa genişlikleri */
+#row1{min-height: 100px;}
+#row2{min-height: 635px;}
+
+/* wallpaper */
+#wall{
+    background-image: url(RESİM/wallpaper.svg);
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+
+#wall1{
+    background-image: url(RESİM/human.jpg);
+    background-position: center;
+    background-size: cover;   
+}
+#wall2{
+    background-image: url(RESİM/rdr2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+#wall3{
+    background-image: url(RESİM/uncharted2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+#wall4{
+    background-image: url(RESİM/lastofus.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+/* sayfa içerik yazı-kutu */
+
+#wall1 p , #wall2 p ,#wall3 p,#wall4 p {
+    color: white;
+    background-color: black;
+    border: 1px solid red;
+    border-radius: 15px;
+    padding: 15px;
+}
+#wall2 .card,#wall4 .card{
+    color: white;
+    border: 1px solid red;
+    border-radius: 15px;
+    padding: 15px;
+}
+#wall1 h1,#wall2 h1,#wall3 h1,#wall4 h1{
+    color: darkred;
+    border: 1px solid red;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 28px;
+    text-align: center;
+    background-color: black;
+}
+#wall1 h2,#wall2 h2,#wall3 h2,#wall4 h2{
+    color: white;
+    border: 1px solid red;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 28px;
+    text-align: center;
+    background-color: black;
+}
+
+/* sayfa 1 */
+#wall1 h1:hover , #wall1 h2:hover ,#wall1 p:hover {
+    background-color: darkcyan;
+    background-size: cover;
+    background-position: center;
+    color: black;
+}
+#wall1 h1 , #wall1 h2 , #wall1 p{
+    background-color: rgb(74, 146, 206);
+    background-position: center;
+    background-size: cover;
+    color: black;
+    border: 1px solid white;
+}
+#wall1 .card{
+    border: 1px solid white;
+}
+
+/* sayfa 2 */
+#wall2 h1:hover , #wall2 h2:hover , #wall2 p:hover  {
+    background-color: darkred;
+    color: black;
+    font-weight: bold;
+}
+
+/* sayfa 3 */
+#wall3 h1 , #wall3 h2 , #wall3 p{
+    background-color: darkcyan;
+    background-position: center;
+    background-size: cover;
+    color: black;
+    border: 1px solid darkturquoise;
+}
+#wall3 .card{
+    border: 1px solid darkturquoise;
+}
+#wall3 h1:hover , #wall3 h2:hover , #wall3 p:hover  {
+    background-color: darkgray;
+    color: black;
+    font-weight: bold;
+}
+
+/* sayfa 4 */
+#wall4 h1 , #wall4 h2 , #wall4 p{
+    background-color: rgb(28, 97, 76);
+    background-position: center;
+    background-size: cover;
+    color: black;
+    border: 1px solid darkgreen;
+}
+#wall4 .card{
+    border: 1px solid darkgreen;
+}
+#wall4 h1:hover , #wall4 h2:hover , #wall4 p:hover  {
+    background-color: darkgreen;
+    color: black;
+    font-weight: bold;
+}
+
+
+hr{
+    border: 1px black solid;
+}
+/* grid  */
+
+#icerik{
+    display: grid;
+    row-gap: 15px;
+}
+
+#yanmenu{
+    display: grid;
+    row-gap: 7px;
+}
+
+/* link düznlemeleri */
+#anamenu ul{
+    list-style: none;
+    display: flex;
+    column-gap: 15px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+#anamenu ul li a{
+    text-decoration: none;
+    transition: ease 0.5s;
+    color: white;
+}
+#anamenu ul li a:hover{
+    color: darkred;
+}
+#wall1 #anamenu ul li a:hover{
+    color:  rgb(74, 146, 206);
+}
+
+#wall3 #anamenu ul li a:hover{
+    color:  darkcyan;
+}
+#wall4 #anamenu ul li a:hover{
+    color:  darkgreen;
+}
+
+
+/* button ayarları */
+
+.btn{
+    padding: 12px 28px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 30px;
+    cursor: pointer;
+    color: black;
+    background-color: white;
+    border-radius: 20px;
+    border: solid red 1px;
+    transition: ease 0.5s;
+    text-decoration: none;
+}
+.btn:hover{
+    background-color: darkred;
+    color: white;
+    border-color: white;
+}
+
+/* kart bölümü */
+.cards{
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    
+
+}
+.card{
+    width: 200px;
+    height: 230px;
+    display: inline-block;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    padding: 15px 25px;
+    cursor: pointer;
+    position: relative;
+    transition: ease 0.5s;
+    margin: 10px 15px;
+    
+}
+
+/* KART İÇİ KUTU VE YAZI */
+#wall .card .card-head   
+{
+       text-align: center;
+    border: 1px solid darkblue;
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+}
+#wall .card .card-head:hover{
+    background-color: darkred;
+    background-size: cover;
+    border-color: white;
+    background-position: center;
+    color: black;
+}
+#wall1 .card .card-head{
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 20px;
+    background-color: rgb(74, 146, 206);
+    color: black;
+
+}
+#wall1 .card .card-head:hover{
+    background-color: darkcyan;
+    background-size: cover;
+    background-position: center;
+    color: black;
+}
+
+#wall2 .card .card-head{
+    text-align: center;
+    border: 1px solid red;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+}
+#wall2 .card .card-head:hover{
+    background-color: darkred;
+    color: black;
+    font-weight: bold;
+}
+
+#wall3 .card .card-head{
+    text-align: center;
+    border: 1px solid darkturquoise;
+    border-radius: 20px;
+    background-color: darkcyan;
+    color: black;
+}
+#wall3 .card .card-head:hover{
+    background-color: darkgray;
+    color: black;
+    font-weight: bold;
+}
+#wall4 .card .card-head{
+    text-align: center;
+    border: 1px solid darkgreen;
+    border-radius: 20px;
+    background-color: rgb(28, 97, 76);
+    color: black;
+}
+#wall4 .card .card-head:hover{
+    background-color: darkgreen;
+    color: black;
+    font-weight: bold;
+}
+
+/* KART HAREKETİ */
+#wall .card:hover , #wall1 .card:hover , #wall2 .card:hover , 
+#wall4 .card:hover , #wall3 .card:hover  {
+    transform: translateY(-10px);
+    border-color: white;
+}
+
+/* KART BUTTON  */
+.card .card-bottom{
+    position: absolute;
+    bottom: 26px;
+}
+
+/* resim */
+
+/* anamenü */
+.card.card-1{
+    background-image: url(RESİM/human.jpg);
+}
+.card.card-2{
+    background-image: url(RESİM/rdr2.jpg);
+}
+.card.card-3{
+    background-image: url(RESİM/uncharted2.jpg);
+}
+.card.card-4{
+    background-image: url(RESİM/lastofus.jpg);
+}
+
+/* detroit  */
+#wall1 .card.card-1{
+    background-image: url(RESİM/karekterler/detroit/conner2.jpg);
+}
+#wall1 .card.card-2{
+    background-image: url(RESİM/karekterler/detroit/markus3.jpg);
+}
+#wall1 .card.card-3{
+    background-image: url(RESİM/karekterler/detroit/kara2.jpg);
+}
+#wall1 .card.card-4{
+    background-image: url(RESİM/karekterler/detroit/Hank\ Anderson.webp);
+}
+#wall1 .card.card-5{
+    background-image: url(RESİM/karekterler/detroit/alice2.jpg);
+}
+#wall1 .card.card-6{
+    background-image: url(RESİM/karekterler/detroit/north2.jpg);
+}
+#wall1 .card.card-7{
+    background-image: url(RESİM/karekterler/detroit/Carl\ Manfred.jpg);
+}
+#wall1 .card.card-8{
+    background-image: url(RESİM/karekterler/detroit/luther.webp);
+}
+#wall1 .card.card-9{
+    background-image: url(RESİM/karekterler/detroit/Elijah\ Kamski.jpg);
+}
+#wall1 .card.card-10{
+    background-image: url(RESİM/karekterler/detroit/chloe.png);
+}
+
+/* rdr2 */
+#wall2 .card.card-1{
+    background-image: url(RESİM/karekterler/rdr2/Arthur.jpg);
+}
+#wall2 .card.card-2{
+    background-image: url(RESİM/karekterler/rdr2/dutch.jpg);
+}
+#wall2 .card.card-3{
+    background-image: url(RESİM/karekterler/rdr2/HOSEA2.png);
+}
+#wall2 .card.card-4{
+    background-image: url(RESİM/karekterler/rdr2/sadie-adler1.jpg);
+}
+#wall2 .card.card-5{
+    background-image: url(RESİM/karekterler/rdr2/abigail.jpg);
+}
+#wall2 .card.card-6{
+    background-image: url(RESİM/karekterler/rdr2/charles.png);
+}
+#wall2 .card.card-7{
+    background-image: url(RESİM/karekterler/rdr2/JOHN2.jpg);
+}
+#wall2 .card.card-8{
+    background-image: url(RESİM/karekterler/rdr2/micah.jpg);
+}
+#wall2 .card.card-9{
+    background-image: url(RESİM/karekterler/rdr2/jack.jpg);
+}
+#wall2 .card.card-10{
+    background-image: url(RESİM/karekterler/rdr2/Uncle.jpg);
+}
+/* uncharted */
+#wall3 .card.card-1{
+    background-image: url(RESİM/karekterler/uncharted/nathan.jpg);
+}
+#wall3 .card.card-2{
+    background-image: url(RESİM/karekterler/uncharted/samuell.jpg);
+}
+#wall3 .card.card-3{
+    background-image: url(RESİM/karekterler/uncharted/elena.webp);
+}
+#wall3 .card.card-4{
+    background-image: url(RESİM/karekterler/uncharted/victor.jpg);
+}
+#wall3 .card.card-5{
+    background-image: url(RESİM/karekterler/uncharted/nadine.jpg);
+}
+#wall3 .card.card-6{
+    background-image: url(RESİM/karekterler/uncharted/rafe.jpg);
+}
+#wall3 .card.card-7{
+    background-image: url(RESİM/karekterler/uncharted/Hector.webp);
+}
+#wall3 .card.card-8{
+    background-image: url(RESİM/karekterler/uncharted/chloe.jpg);
+}
+#wall3 .card.card-9{
+    background-image: url(RESİM/karekterler/uncharted/asav.jpg);
+}
+#wall3 .card.card-10{
+    background-image: url(RESİM/karekterler/uncharted/Gabriel.webp);
+}
+
+/* last */
+#wall4 .card.card-1{
+    background-image: url(RESİM/karekterler/last/ellie4.webp);
+}
+#wall4 .card.card-2{
+    background-image: url(RESİM/karekterler/last/joel.jpg);
+}
+#wall4 .card.card-3{
+    background-image: url(RESİM/karekterler/last/tommy.webp);
+}
+#wall4 .card.card-4{
+    background-image: url(RESİM/karekterler/last/tesss.jpg);
+}
+#wall4 .card.card-5{
+    background-image: url(RESİM/karekterler/last/marlene.webp);
+}
+#wall4 .card.card-6{
+    background-image: url(RESİM/karekterler/last/sarah.jpg);
+}
+#wall4 .card.card-7{
+    background-image: url(RESİM/karekterler/last/bill.jpg);
+}
+#wall4 .card.card-8{
+    background-image: url(RESİM/karekterler/last/henry.webp);
+}
+#wall4 .card.card-9{
+    background-image: url(RESİM/karekterler/last/sam.webp);
+}
+#wall4 .card.card-10{
+    background-image: url(RESİM/karekterler/last/maria.webp);
+}
